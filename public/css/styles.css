@@ -10,6 +10,7 @@
 body, h1, h2, h3, p, ul, li, nav, footer {
     margin: 0;
     padding: 0;
+    color: #4A4A4A;  /* Teks utama sedikit lebih gelap untuk kontras yang lebih baik */
 }
 
 /* Pastikan margin pada footer dan header tidak menyebabkan masalah */
@@ -21,8 +22,8 @@ header, footer {
 
 /* Header */
 .main-header {
-    background-color: #333;
-    color: white;
+    background-color: #73A9AD;  /* Warna biru-hijau gelap untuk latar belakang header */
+    color: #F5F0BB;  /* Teks terang untuk kontras yang tajam */
     padding: 1rem 0;
 }
 
@@ -37,6 +38,7 @@ header, footer {
 
 .main-header .logo {
     font-size: 1.5rem;
+    color: #F5F0BB;  /* Warna logo terang */
 }
 
 .main-header .nav-links {
@@ -46,30 +48,24 @@ header, footer {
 }
 
 .main-header .nav-links a {
-    color: white;
+    color: #F5F0BB;  /* Warna link terang untuk keterbacaan */
     text-decoration: none;
+}
+
+.main-header .nav-links a:hover {
+    color: #B3C890;  /* Warna hijau menenangkan saat hover */
 }
 
 /* Section untuk konten utama */
 .news-section {
     padding: 3rem 0;
-    background-color: #f4f4f4;
-}
-/* Content */
-main {
-    padding: 2rem 0;
-}
-
-/* Memberikan ruang lebih pada konten */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #DBDFAA;  /* Warna kehijauan kekuningan untuk latar belakang */
 }
 
 .news-section h2 {
     text-align: center;
     margin-bottom: 1rem;
+    color: #73A9AD;  /* Teks gelap biru-hijau untuk kontras */
 }
 
 .news-grid {
@@ -96,40 +92,45 @@ main {
 
 .news-card h3 {
     margin: 1rem 0 0.5rem;
+    color: #73A9AD;  /* Teks judul di dalam card lebih gelap */
 }
 
 .news-card .read-more {
-    color: #007bff;
+    color: #B3C890;  /* Gunakan warna hijau saat hover */
     text-decoration: none;
+}
+
+.news-card .read-more:hover {
+    color: #F5F0BB;  /* Gunakan warna terang saat hover */
 }
 
 /* Login Section */
 .login-section {
-    padding: 5rem 0;  /* Lebih besar padding untuk mengisi layar */
-    background-color: #007bff;
+    padding: 5rem 0;
+    background-color: #B3C890;  /* Warna hijau menenangkan untuk latar belakang login */
     color: white;
     text-align: center;
-    min-height: 85vh; /* Membuat section login mengisi seluruh layar */
+    min-height: 85vh;
 }
 
 /* Login Form */
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;  /* Menambah jarak antar elemen */
+    gap: 1.5rem;
     width: 100%;
-    max-width: 450px;  /* Tingkatkan max-width agar lebih besar pada layar lebar */
+    max-width: 450px;
     margin: 0 auto;
     padding: 1rem;
-    background-color: #fff;  /* Menambahkan latar belakang putih untuk form */
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Menambahkan shadow agar form lebih menonjol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .login-form label {
     text-align: left;
     font-weight: bold;
-    color: #333;
+    color: #73A9AD;  /* Warna label biru-hijau untuk kontras */
 }
 
 .login-form input {
@@ -138,11 +139,12 @@ main {
     border-radius: 4px;
     width: 100%;
     font-size: 1rem;
+    color: #73A9AD;  /* Teks input biru-hijau untuk keterbacaan */
 }
 
 .btn-login {
     padding: 0.8rem;
-    background-color: #000;
+    background-color: #73A9AD;  /* Gunakan warna biru-hijau untuk tombol */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -152,32 +154,33 @@ main {
 }
 
 .btn-login:hover {
-    background-color: #333;
+    background-color: #B3C890;  /* Gunakan warna hijau menenangkan saat hover */
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
     .login-form {
-        max-width: 90%;  /* Lebar form akan lebih lebar pada layar kecil */
+        max-width: 90%;
     }
 }
 
 /* Footer */
 .main-footer {
     text-align: center;
-    padding: 2rem 0;  /* Padding atas dan bawah lebih besar agar lebih rapi */
-    background-color: #333;  /* Warna latar belakang gelap */
-    color: white;
+    padding: 2rem 0;
+    background-color: #73A9AD;  /* Warna biru-hijau gelap untuk footer */
+    color: #F5F0BB;  /* Teks terang untuk footer */
     margin-top: 2rem;
 }
 
 .main-footer .container {
-    width: 90%;  /* Lebar container menyesuaikan dengan konten */
-    max-width: 1200px;  /* Batasan lebar maksimal */
-    margin: 0 auto;  /* Menjaga container tetap terpusat */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .main-footer p {
-    font-size: 1rem;  /* Ukuran font lebih kecil dan jelas */
-    margin: 0;  /* Menghilangkan margin default */
+    font-size: 1rem;
+    margin: 0;
+    color: #F5F0BB;  /* Warna teks footer terang */
 }
