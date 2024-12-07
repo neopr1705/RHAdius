@@ -1,0 +1,183 @@
+/* Reset dasar - Reset margin, padding, dan box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Reset margin dan padding untuk elemen dasar */
+body, h1, h2, h3, p, ul, li, nav, footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Pastikan margin pada footer dan header tidak menyebabkan masalah */
+header, footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Header */
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-header .logo {
+    font-size: 1.5rem;
+}
+
+.main-header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-header .nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Section untuk konten utama */
+.news-section {
+    padding: 3rem 0;
+    background-color: #f4f4f4;
+}
+/* Content */
+main {
+    padding: 2rem 0;
+}
+
+/* Memberikan ruang lebih pada konten */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.news-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.news-card .read-more {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Login Section */
+.login-section {
+    padding: 5rem 0;  /* Lebih besar padding untuk mengisi layar */
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    min-height: 85vh; /* Membuat section login mengisi seluruh layar */
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;  /* Menambah jarak antar elemen */
+    width: 100%;
+    max-width: 450px;  /* Tingkatkan max-width agar lebih besar pada layar lebar */
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;  /* Menambahkan latar belakang putih untuk form */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Menambahkan shadow agar form lebih menonjol */
+}
+
+.login-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.btn-login {
+    padding: 0.8rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn-login:hover {
+    background-color: #333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .login-form {
+        max-width: 90%;  /* Lebar form akan lebih lebar pada layar kecil */
+    }
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 2rem 0;  /* Padding atas dan bawah lebih besar agar lebih rapi */
+    background-color: #333;  /* Warna latar belakang gelap */
+    color: white;
+    margin-top: 2rem;
+}
+
+.main-footer .container {
+    width: 90%;  /* Lebar container menyesuaikan dengan konten */
+    max-width: 1200px;  /* Batasan lebar maksimal */
+    margin: 0 auto;  /* Menjaga container tetap terpusat */
+}
+
+.main-footer p {
+    font-size: 1rem;  /* Ukuran font lebih kecil dan jelas */
+    margin: 0;  /* Menghilangkan margin default */
+}
