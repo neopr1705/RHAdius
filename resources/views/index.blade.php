@@ -31,16 +31,15 @@
 @endsection
 
 
-@if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
+@if (session('success'))
+    <script>
+        toastr.success("{{ session('success') }}");
+    </script>
 @endif
 
-@if($errors->any())
-    <div class="alert alert-danger">
-        @foreach($errors->all() as $error)
-            <p>{{ $error }}</p>
-        @endforeach
-    </div>
+@if ($errors->any())
+    <script>
+        toastr.error("{{ $errors->first() }}");
+    </script>
 @endif
+

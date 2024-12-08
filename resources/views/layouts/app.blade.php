@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RHAdius</title>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <!-- Toastr CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
 </head>
 <body>
     <!-- Header -->
@@ -13,7 +16,7 @@
             <h1 class="logo">RHAdius</h1>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="#news">Materi Terkini!</a></li>
                     <li><a href="{{ route('login') }}" class="btn-login">Login</a></li>
                 </ul>
@@ -33,4 +36,8 @@
         </div>
     </footer>
 </body>
+
+<!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 </html>

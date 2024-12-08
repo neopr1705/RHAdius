@@ -15,9 +15,9 @@ class AuthController extends Controller
         ]);
 
         // Cek apakah username dan password cocok (sederhana)
-        if ($validated['username'] == 'admin' && $validated['password'] == 'password') {
+        if ($validated['username'] == 'admin' && $validated['password'] == 'admin') {
             // Set session atau lakukan login
-            return redirect('/')->with('success', 'Login berhasil!');
+            return redirect('/')->with('success', ' ');
         }
 
         return back()->withErrors(['username' => 'Username atau password salah!']);
