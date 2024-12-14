@@ -6,15 +6,28 @@
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 /* Reset margin dan padding untuk elemen dasar */
-body, h1, h2, h3, p, ul, li, nav, footer {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+nav,
+footer {
     margin: 0;
     padding: 0;
-    color: #4A4A4A;  /* Teks utama sedikit lebih gelap untuk kontras yang lebih baik */
+    color: #4A4A4A;
+    /* Teks utama sedikit lebih gelap untuk kontras yang lebih baik */
 }
 
 /* Pastikan margin pada footer dan header tidak menyebabkan masalah */
-header, footer {
+header,
+footer {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -22,8 +35,10 @@ header, footer {
 
 /* Header */
 .main-header {
-    background-color: #73A9AD;  /* Warna biru-hijau gelap untuk latar belakang header */
-    color: #F5F0BB;  /* Teks terang untuk kontras yang tajam */
+    background-color: #66A9FF;
+    /* Warna biru terang untuk latar belakang header */
+    color: #F5F0BB;
+    /* Teks terang untuk kontras yang tajam */
     padding: 1rem 0;
 }
 
@@ -32,13 +47,26 @@ header, footer {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    max-width: 1200px;
+    max-width: 90rem;
     margin: 0 auto;
 }
 
+/* Styling untuk logo dan teks RHadius */
+
+/* Styling untuk gambar logo */
+.logo-img {
+    width: 15rem;  /* Ukuran logo, sesuaikan dengan kebutuhan */
+    height: 4rem;  /* Sesuaikan dengan ukuran logo */
+    margin-right: 10px;  /* Memberikan jarak antara logo dan teks */
+ 
+}
+
 .main-header .logo {
+
     font-size: 1.5rem;
-    color: #F5F0BB;  /* Warna logo terang */
+    color: #F5F0BB;
+    
+    /* Warna logo terang */
 }
 
 .main-header .nav-links {
@@ -48,24 +76,28 @@ header, footer {
 }
 
 .main-header .nav-links a {
-    color: #F5F0BB;  /* Warna link terang untuk keterbacaan */
+    color: #F5F0BB;
+    /* Warna link terang untuk keterbacaan */
     text-decoration: none;
 }
 
 .main-header .nav-links a:hover {
-    color: #B3C890;  /* Warna hijau menenangkan saat hover */
+    color: #D32F2F;
+    /* Warna merah gelap saat hover */
 }
 
 /* Section untuk konten utama */
 .news-section {
     padding: 3rem 0;
-    background-color: #DBDFAA;  /* Warna kehijauan kekuningan untuk latar belakang */
+    background-color: #FF4136;
+    /* Warna merah terang untuk latar belakang */
 }
 
 .news-section h2 {
     text-align: center;
     margin-bottom: 1rem;
-    color: #73A9AD;  /* Teks gelap biru-hijau untuk kontras */
+    color: #003D7A;
+    /* Teks biru gelap untuk kontras */
 }
 
 .news-grid {
@@ -92,45 +124,36 @@ header, footer {
 
 .news-card h3 {
     margin: 1rem 0 0.5rem;
-    color: #73A9AD;  /* Teks judul di dalam card lebih gelap */
+    color: #003D7A;
+    /* Teks judul di dalam card lebih gelap */
 }
 
 .news-card .read-more {
-    color: #B3C890;  /* Gunakan warna hijau saat hover */
+    color: #66A9FF;
+    /* Gunakan warna biru terang saat hover */
     text-decoration: none;
 }
 
 .news-card .read-more:hover {
-    color: #F5F0BB;  /* Gunakan warna terang saat hover */
+    color: #D32F2F;
+    /* Gunakan warna terang saat hover */
 }
 
 /* Login Section */
 .login-section {
     padding: 5rem 0;
-    background-color: #B3C890;  /* Warna hijau menenangkan untuk latar belakang login */
+    background-color: #66A9FF;
+    /* Warna biru terang untuk latar belakang login */
     color: white;
     text-align: center;
     min-height: 85vh;
 }
 
-/* Login Form */
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 .login-form label {
     text-align: left;
     font-weight: bold;
-    color: #73A9AD;  /* Warna label biru-hijau untuk kontras */
+    color: #003D7A;
+    /* Warna label biru gelap untuk kontras */
 }
 
 .login-form input {
@@ -139,12 +162,14 @@ header, footer {
     border-radius: 4px;
     width: 100%;
     font-size: 1rem;
-    color: #73A9AD;  /* Teks input biru-hijau untuk keterbacaan */
+    color: #003D7A;
+    /* Teks input biru gelap untuk keterbacaan */
 }
 
 .btn-login {
     padding: 0.8rem;
-    background-color: #73A9AD;  /* Gunakan warna biru-hijau untuk tombol */
+    background-color: #66A9FF;
+    /* Gunakan warna biru terang untuk tombol */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -154,7 +179,8 @@ header, footer {
 }
 
 .btn-login:hover {
-    background-color: #ffffff;  /* Gunakan warna hijau menenangkan saat hover */
+    background-color: #D32F2F;
+    /* Gunakan warna merah terang saat hover */
 }
 
 /* Form Section */
@@ -170,7 +196,8 @@ header, footer {
 
 .form-container h1 {
     margin-bottom: 1.5rem;
-    color: #333;
+    color: #003D7A;
+    /* Warna biru gelap untuk judul */
     font-size: 1.8rem;
     text-align: center;
 }
@@ -201,19 +228,20 @@ header, footer {
 }
 
 .form-input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    border-color: #66A9FF;
+    /* Biru terang saat fokus */
+    box-shadow: 0 0 5px rgba(102, 169, 255, 0.3);
     outline: none;
 }
 
 .form-error {
-    color: red;
+    color: #D32F2F;
     font-size: 0.875rem;
     margin-top: 0.25rem;
 }
 
 .form-button {
-    background-color: #007bff;
+    background-color: #66A9FF;
     color: white;
     padding: 0.75rem;
     border: none;
@@ -224,7 +252,8 @@ header, footer {
 }
 
 .form-button:hover {
-    background-color: #0056b3;
+    background-color: #003D7A;
+    /* Biru gelap saat hover */
 }
 
 /* Responsiveness */
@@ -232,6 +261,7 @@ header, footer {
     .login-form {
         max-width: 90%;
     }
+
     .form-container {
         padding: 1rem;
     }
@@ -240,23 +270,341 @@ header, footer {
 /* Styling Footer */
 .main-footer {
     text-align: center;
-    background-color: #73A9AD; /* Warna biru-hijau gelap */
-    color: #F5F0BB;           /* Teks terang */
-    padding: 2rem 0;          /* Ruang dalam footer */
-    margin: 0;                /* Hapus margin luar */
-    width: 100%;              /* Pastikan menutupi seluruh lebar */
-    box-sizing: border-box;   /* Sertakan padding dalam ukuran */
+    background-color: #003D7A;
+    /* Menggunakan warna biru gelap untuk latar belakang */
+    color: #F5F0BB;
+    /* Teks terang untuk kontras yang tajam */
+    padding: 2rem 0;
+    /* Ruang dalam footer */
+    margin: 0;
+    /* Hapus margin luar */
+    width: 100%;
+    /* Pastikan menutupi seluruh lebar */
+    box-sizing: border-box;
+    /* Sertakan padding dalam ukuran */
 }
 
 .main-footer .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto; /* Pusatkan konten */
-    padding: 0;     /* Hapus padding container */
+    margin: 0 auto;
+    /* Pusatkan konten */
+    padding: 0;
+    /* Hapus padding container */
 }
 
 .main-footer p {
     font-size: 1rem;
-    margin: 0; /* Hapus margin paragraf */
+    margin: 0;
+    /* Hapus margin paragraf */
     color: #F5F0BB;
 }
+
+/* Link footer */
+.main-footer a {
+    color: #F5F0BB;
+    /* Teks link dengan warna terang */
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    color: #D32F2F;
+    /* Warna merah saat hover untuk menonjolkan link */
+}
+
+
+/* Styling untuk setiap box */
+.box {
+    border: 2px solid #000;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.welcome-section,
+.login-section,
+.materi-section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #66A9FF;
+    /* Gunakan warna biru terang untuk tombol submit */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #003D7A;
+    /* Biru gelap saat hover */
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.news-card {
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+
+.read-more {
+    color: #66A9FF;
+    /* Biru terang untuk tautan baca lebih lanjut */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Specific Sections Styling */
+#welcome {
+    padding: 40px 0;
+}
+
+#login {
+    padding: 40px 0;
+}
+
+#materi {
+    padding: 40px 0;
+}
+
+#materi h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003D7A;
+    /* Biru gelap untuk judul materi */
+}
+
+/* Section umum yang akan diterapkan ke semua section */
+section {
+    min-height: 85vh; /* Setiap section akan memiliki tinggi minimal 85% dari tinggi layar */
+    padding: 60px 0; /* Sesuaikan padding jika diperlukan */
+}
+
+/* Section Welcome */
+#welcome {
+    background-color: #f4f4f4;
+    /* Latar belakang terang */
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Box dalam welcome section */
+.welcome-section .box {
+    background-color: #fff;
+    /* Latar belakang box putih */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Tombol Mulai Sekarang */
+.btn-start {
+    display: inline-block;
+    background-color: #66A9FF;
+    /* Warna Biru Muda 60% */
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.btn-start:hover {
+    background-color: #FF4136;
+    /* Warna Merah Cerah 25% untuk hover */
+    transform: scale(1.05);
+    /* Menambah sedikit ukuran tombol */
+}
+
+/* Fokus pada tombol */
+.btn-start:focus {
+    outline: none;
+    border: 2px solid #003D7A;
+    /* Biru Gelap 5% saat fokus */
+}
+
+/* Responsif untuk tombol */
+@media (max-width: 768px) {
+    .btn-start {
+        width: 100%;
+        padding: 12px;
+    }
+
+    @media (max-width: 768px) {
+        section {
+            min-height: 100vh; /* Untuk perangkat kecil, gunakan full screen */
+        }
+    }
+}
+
+/* Styling Login Section */
+#login {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    min-height: 85vh; /* Masih 85vh untuk ukuran section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 3rem; /* Menambah padding untuk memberikan ruang lebih banyak dalam form */
+    width: 100rem; /* Form mengambil 60% dari lebar section */
+    max-width: 500px; /* Lebar maksimal form */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem; /* Meningkatkan padding input untuk tampilan lebih luas */
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #66A9FF;
+    box-shadow: 0 0 8px rgba(102, 169, 255, 0.3);
+    outline: none;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.remember-me {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: #66A9FF;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    padding: 1rem; /* Menambah padding agar tombol lebih besar dan mudah diklik */
+    background-color: #66A9FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%; /* Form lebih lebar pada layar kecil */
+        padding: 2rem; /* Padding disesuaikan pada perangkat kecil */
+    }
+    #login {
+        min-height: 100vh; /* Menyesuaikan tinggi section pada perangkat kecil */
+    }
+}
+
+/* Styling for Remember me */
+.remember-me {
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;  /* Memastikan teks dan checkbox sejajar vertikal */
+}
+
+.remember-me input {
+    margin-right: 0.5rem; /* Memberikan jarak antara checkbox dan teks */
+}
+
+/* Styling for Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+/* end of login */

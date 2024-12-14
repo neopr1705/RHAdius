@@ -13,7 +13,9 @@
     <!-- Header -->
     <header class="main-header">
         <div class="container">
-            <h1 class="logo">RHAdius</h1>
+            <h1 class="logo">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo-img">
+            </h1>
             <nav>
                 <ul class="nav-links">
                     <li><a href="{{ route('home') }}">Home</a></li>
