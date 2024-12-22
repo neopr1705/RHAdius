@@ -13,14 +13,14 @@
     <!-- Header -->
     <header class="main-header">
         <div class="container">
-            <h1 class="logo">
+            <a href="{{ route('home') }}" class="logo">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo-img">
-            </h1>
+            </a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="#news">Materi Terkini!</a></li>
-                    <li><a href="{{ route('login') }}" class="btn-login">Login</a></li>
+                    <li><a href="#materi">Materi Terkini!</a></li>
+                    <li><a href="#login" class="btn-login">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,9 +37,33 @@
             <p>&copy; 2024 RHAdius. All rights reserved.</p>
         </div>
     </footer>
+    <!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" onclick="scrollToTop()" class="scroll-btn" style="display:none;">
+    ↑
+</button>
 </body>
 
 <!-- Toastr JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script>
+    // Get the button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+    // When the user scrolls down 100px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block"; // Show the button
+        } else {
+            scrollToTopBtn.style.display = "none"; // Hide the button
+        }
+    };
+
+    // Scroll the page back to the top
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Smooth scroll
+        });
+    }
+</script>
 </html>

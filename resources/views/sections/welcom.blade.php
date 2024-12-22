@@ -6,7 +6,7 @@
             </svg>
             <h2>Selamat Datang di RHadius</h2>
             <p>Rapid Health Assesment dan Tempat melek tanggap bencana.</p>
-            <a href="#login" class="btn-start">Mulai Sekarang!</a>
+            <a href="{{ route('formRHA.formrha') }}" class="btn-start">Isi Formulir Sekarang!</a>
         </div>
     </div>
 </section>

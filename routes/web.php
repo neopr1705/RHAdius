@@ -3,6 +3,8 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MateriController;
+use App\Http\Controllers\formrhaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');  // Menggunakan HomeController untuk root
 
@@ -12,8 +14,18 @@ Route::get('/posts/create', [PostController::class, 'create'])->name('posts.crea
 
 // Route login untuk form login
 Route::get('/login', function () {
-    return view('login');
+    return view('sections.login');
 })->name('login');
 
 // Route login untuk menangani form login (POST request)
 Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/materi/potensi-masalah-kesehatan', [MateriController::class, 'potensiMasalahKesehatan'])->name('materi.potensi');
+Route::get('/materi/respon-edukasi-siaga', [MateriController::class, 'responEdukasiSiaga'])->name('materi.respon');
+Route::get('/materi/edukasi-siaga-bencana', [MateriController::class, 'edukasiSiagaBencana'])->name('materi.bencana');
+
+Route::get('/materi', function () {
+    return view('sections.materi');
+})->name('materi');
+
+Route::get('/formRHA/Form-RHA', [formrhaController::class, 'Form_RHA'])->name('formRHA.formrha');
