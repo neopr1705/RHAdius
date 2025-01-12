@@ -7,7 +7,10 @@
     <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+        <!-- Toastr CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
 </head>
@@ -44,67 +47,76 @@
 <button id="scrollToTopBtn" onclick="scrollToTop()" class="scroll-btn" style="display:none;">
     ↑
 </button>
-</body>
 
 <!-- Toastr JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script>
-    // Get the button
+    // Import SweetAlert2 dan Toastr jika diperlukan
+// Pastikan CDN SweetAlert2 sudah ada di layout atau di file blade.
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Scroll to Top dan Sticky Header
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    const header = document.querySelector(".main-header");
+    const sticky = header.offsetTop;
 
-    // When the user scrolls down 100px from the top of the document, show the button
+    // Menampilkan tombol scroll ke atas jika scroll lebih dari 100px
     window.onscroll = function () {
-    // Sticky Header
-    stickyHeader();
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block"; // Tampilkan tombol
+        } else {
+            scrollToTopBtn.style.display = "none"; // Sembunyikan tombol
+        }
 
-    // Scroll to Top Button
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollToTopBtn.style.display = "block"; // Show the button
-    } else {
-        scrollToTopBtn.style.display = "none"; // Hide the button
-    }
-};
+        // Efek Sticky Header
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    };
 
-
-    // Scroll the page back to the top
+    // Scroll ke atas dengan smooth scroll
     function scrollToTop() {
         window.scrollTo({
             top: 0,
-            behavior: "smooth" // Smooth scroll
+            behavior: "smooth"
         });
     }
-</script>
-<script>
 
-const header = document.querySelector(".main-header");
-const sticky = header.offsetTop;
+    scrollToTopBtn.addEventListener('click', scrollToTop);
 
-function stickyHeader() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky"); // Tambahkan kelas sticky
-    } else {
-        header.classList.remove("sticky"); // Hapus kelas sticky
-    }
-}
-</script>
-<script>
-    //Script potensi.blade.php
-    // Fungsi untuk memberi efek fade-in saat halaman dimuat
-    document.addEventListener('DOMContentLoaded', function () {
-        var elements = document.querySelectorAll('.fade-in-img');
-        elements.forEach(function (element) {
-            element.style.opacity = '1'; // Mengubah opacity gambar menjadi 1 untuk fade-in
-        });
+    // Fade-in efek untuk gambar
+    var elements = document.querySelectorAll('.fade-in-img');
+    elements.forEach(function (element) {
+        element.style.opacity = '1';
+        element.style.transition = 'opacity 2s ease-in';
     });
 
-     // Tombol hover effect
-     var button = document.getElementById('backButton');
+    // Efek hover pada tombol
+    var button = document.getElementById('backButton');
+    if (button) {
         button.addEventListener('mouseover', function () {
-            button.style.backgroundColor = '#383d63'; // Ganti warna tombol saat hover
+            button.style.backgroundColor = '#383d63';
         });
 
         button.addEventListener('mouseout', function () {
-            button.style.backgroundColor = '#66a9ff'; // Kembalikan warna tombol saat mouse keluar
+            button.style.backgroundColor = '#66a9ff';
         });
+    }
+
+    // SweetAlert untuk login sukses
+    if(session('login_success'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Login Berhasil',
+            text: '{{ session("login_success") }}',
+            showConfirmButton: false,
+            timer: 1500
+        });
+    endif
+});
+
 </script>
+</body>
 </html>

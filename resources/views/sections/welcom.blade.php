@@ -1,11 +1,34 @@
-<section id="welcome" class="welcome-section" style="display: flex; align-items: center; justify-content: flex-start; height: 100vh; background-color: #f4f4f4; padding: 0 15px;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <div class="box" style="width: 50%; padding: 20px; background: #ffffff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; display: flex; flex-direction: column; align-items: flex-start;">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" width="80" height="80" style="display: block; margin-bottom: 15px;">
 
-            <h1 style="font-size: 2.5em; color: #333; margin-bottom: 10px; text-align: left;">Selamat Datang di RHAdius</h1>
-            <p style="font-size: 1em; color: #555; line-height: 1.6; text-align: left;">Rapid Health Assesment dan Tempat melek tanggap bencana.</p>
-            <a href="{{ route('formRHA.formrha') }}" class="btn-start" style="display: inline-block; margin-top: 20px; padding: 10px 20px; font-size: 1em; color: #fff; background-color: #007BFF; text-decoration: none; border-radius: 4px; transition: background-color 0.3s;">Isi Formulir Sekarang!</a>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+    <section id="welcome" style="display: flex; align-items: center; justify-content: flex-start; height: 100vh; background-image: url('images/landing-background.jpg'); background-size: cover; background-position: center; padding: 0 15px; opacity: 0; transition: opacity 2.5s ease;">
+        <div style="max-width: 1200px; margin: 0 15%; display: flex; flex-direction: column; align-items: flex-start;">
+            <!-- Heading -->
+            <h1 style="font-size: 4em; color: #fff; margin-bottom: 15px; line-height: 1.2;">Selamat Datang di RHAdius</h1>
+            
+            <!-- Subtext -->
+            <p style="font-size: 1.5em; color: #f9f9f9; line-height: 1.6; margin-bottom: 40px;">Rapid Health Assesment dan Tempat melek tanggap bencana.</p>
+            
+          <!-- Button -->
+          <a href="{{ route('formRHA.formrha') }}" id="cta-button" style="display: inline-block; padding: 15px 30px; font-size: 1.2em; color: #007BFF; background-color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; transition: all 0.3s ease; text-align: center;">Isi Formulir Sekarang!</a>
         </div>
-    </div>
-</section>
+    </section>
+
+    <script>
+        // Add fade-in effect after the page is loaded
+        window.addEventListener('load', function () {
+            document.getElementById('welcome').style.opacity = 1; // Trigger fade-in by setting opacity to 1
+        });
+           // Add hover effect to the button
+           const button = document.getElementById('cta-button');
+        button.addEventListener('mouseenter', function () {
+            button.style.transform = 'scale(1.1)'; // Make button larger
+            button.style.backgroundColor = '#007BFF'; // Change background color to gold
+            button.style.color = '#fff'; // Change text color to dark
+        });
+        button.addEventListener('mouseleave', function () {
+            button.style.transform = 'scale(1)'; // Reset size
+            button.style.backgroundColor = '#fff'; // Reset background color
+            button.style.color = '#007BFF'; // Reset text color
+        });
+    </script>
+</body>

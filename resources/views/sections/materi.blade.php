@@ -1,6 +1,7 @@
+<body>
 <section id="materi" class="materi-section">
     <div class="container">
-        <h2>Pojok Bencana !</h2>
+        <h2>Pojok Bencana!</h2>
         <div class="news-grid">
             <article class="news-card potensi">
                 <img src="{{ asset('images/potensi.png') }}" alt="Logo" width="80" height="7rem">
@@ -23,3 +24,5 @@
         </div>
     </div>
 </section>
+
+</body>
