@@ -20,9 +20,12 @@ Route::get('/login', function () {
 // Route login untuk menangani form login (POST request)
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::get('/materi/potensi-masalah-kesehatan', [MateriController::class, 'potensiMasalahKesehatan'])->name('materi.potensi');
-Route::get('/materi/respon-edukasi-siaga', [MateriController::class, 'responEdukasiSiaga'])->name('materi.respon');
-Route::get('/materi/edukasi-siaga-bencana', [MateriController::class, 'edukasiSiagaBencana'])->name('materi.bencana');
+Route::get('/materi/persiapan-pra-banjir', [MateriController::class, 'praBanjir'])->name('materi.potensi');
+Route::get('/materi/saat-banjir', [MateriController::class, 'SaatBanjir'])->name('materi.respon');
+Route::get('/materi/pasca-banjir', [MateriController::class, 'PascaBanjir'])->name('materi.bencana');
+Route::get('/materi/siap-siaga',[MateriController::class,'SiapSiaga'])->name('materi.siaga');
+Route::get('/materi/potensi-bencana',[MateriController::class,'PotensiBencana'])->name('materi.potensibencana');
+Route::get('/materi/respon-bencana',[MateriController::class,'ResponBencana'])->name('materi.responbencana');
 
 Route::get('/materi', function () {
     return view('sections.materi');

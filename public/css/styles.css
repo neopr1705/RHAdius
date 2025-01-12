@@ -55,8 +55,8 @@ footer {
 
 /* Styling untuk gambar logo */
 .logo-img {
-    width: 15rem;  /* Ukuran logo, sesuaikan dengan kebutuhan */
-    height: 4rem;  /* Sesuaikan dengan ukuran logo */
+    width: 3rem;  /* Ukuran logo, sesuaikan dengan kebutuhan */
+    height: 6rem;  /* Sesuaikan dengan ukuran logo */
     margin-right: 10px;  /* Memberikan jarak antara logo dan teks */
  
 }
@@ -120,6 +120,9 @@ footer {
 .news-card img {
     width: 100%;
     border-radius: 8px;
+    height: 10rem;
+    width: 13.33rem;
+
 }
 
 .news-card h3 {
@@ -138,6 +141,221 @@ footer {
     color: #D32F2F;
     /* Gunakan warna terang saat hover */
 }
+
+/* Hover Effect for News Card - Pra Banjir */
+.news-card.pra {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-card.pra:hover {
+    background-color: #383d63; /* Change background color on hover */
+}
+
+.news-card.pra:hover h3,
+.news-card.pra:hover p {
+    color: white; /* Change text color of h3 and p to white */
+}
+
+/* Additional Styling for News Card */
+.news-card.pra {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.news-card.pra h3 {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.news-card.pra p {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+/*end NewsCard pra*/
+
+/* Hover Effect for News Card - saat Banjir */
+.news-card.saat {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-card.saat:hover {
+    background-color: #b2dafe; /* Change background color on hover */
+}
+
+
+/* Additional Styling for News Card */
+.news-card.saat {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.news-card.saat h3 {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.news-card.saat p {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+/*end newscard saat*/
+
+/* Hover Effect for News Card - Pra Banjir */
+.news-card.pasca {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-card.pasca:hover {
+    background-color: #0083a4; /* Change background color on hover */
+}
+
+.news-card.pasca:hover h3,
+.news-card.pasca:hover p {
+    color: white; /* Change text color of h3 and p to white */
+}
+
+/* Additional Styling for News Card */
+.news-card.pasca {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.news-card.pasca h3 {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.news-card.pasca p {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+/* end of newscard pasca*/
+
+
+
+/*end of newscard */
+
+.news-card.potensi img {
+    filter: hue-rotate(90deg); /* Memberikan efek warna hijau pada gambar */
+    transition: filter 0.3s ease-in-out; /* Efek transisi halus saat hover */
+}
+
+.news-card.potensi {
+    background-color: #383d63; /* Background berubah saat hover */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.news-card.potensi h3 {
+    color: white; /* Warna teks berubah menjadi putih saat hover */
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.news-card.potensi p {
+    color: white; /* Warna teks berubah menjadi putih saat hover */
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.news-card.potensi .read-more {
+
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+
+.news-card.respon img {
+    filter: hue-rotate(90deg); /* Memberikan efek warna hijau pada gambar */
+    transition: filter 0.3s ease-in-out; /* Efek transisi halus saat hover */
+}
+
+.news-card.respon {
+    background-color: #383d63; /* Background berubah saat hover */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.news-card.respon h3 {
+    color: white; /* Warna teks berubah menjadi putih saat hover */
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.news-card.respon p {
+    color: white; /* Warna teks berubah menjadi putih saat hover */
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.news-card.respon .read-more {
+
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+
+.news-card.siaga img {
+    filter: hue-rotate(90deg); /* Memberikan efek warna hijau pada gambar */
+    transition: filter 0.3s ease-in-out; /* Efek transisi halus saat hover */
+}
+
+.news-card.siaga {
+    background-color: #383d63; /* Background berubah saat hover */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.news-card.siaga h3 {
+    color: white; /* Warna teks berubah menjadi putih saat hover */
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.news-card.siaga p {
+    color: white; /* Warna teks berubah menjadi putih saat hover */
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.news-card.siaga .read-more {
+
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+
+
+
 
 /* Login Section */
 .login-section {
@@ -320,7 +538,6 @@ footer {
     text-align: center;
     margin: 20px 0;
     border-radius: 10px;
-    background-color: #f9f9f9;
 }
 
 .welcome-section,
@@ -430,15 +647,41 @@ section {
 
 /* Box dalam welcome section */
 .welcome-section .box {
-    background-color: #fff;
     /* Latar belakang box putih */
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: inline-block;
     max-width: 500px;
-    width: 100%;
+    width: 50%;
 }
+
+.welcome-section {
+    background-image: url('/images/landing-background.jpg'); /* Path relatif ke public */
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;            
+    color: #ffffff;              
+}
+
+/* Sticky Header */
+.main-header {
+    position: relative;
+    width: 100%;
+    z-index: 1000; /* Tetap di atas elemen lain */
+    transition: all 0.3s ease; /* Animasi transisi saat perubahan */
+}
+
+.main-header.sticky {
+    position: fixed; /* Tetap di posisi atas saat discroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #66A9FF; /* Ganti dengan warna latar yang diinginkan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+
 
 /* Tombol Mulai Sekarang */
 .btn-start {
@@ -613,7 +856,7 @@ h2 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 h1 {
@@ -684,7 +927,7 @@ a.btn.btn-primary:hover {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .heading {
@@ -746,3 +989,228 @@ ul li, ol li {
 .scroll-btn:focus {
     outline: none;
 }
+
+/*PotensiCSS*/
+/* Container Style */
+.container-potensi {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Section Styling for Poster */
+.posters, .posters-potensi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 133%;
+    margin-top: -20px;
+}
+
+.posters {
+    background-color: #383d63;
+}
+
+.posters-potensi {
+    background-color: #d2dadc;
+}
+
+/* Poster Styling */
+.poster {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.poster img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* Button Styling */
+.back-button-potensi {
+    margin-top: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-primary-potensi {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #66a9ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-potensi:hover {
+    background-color: #383d63; /* Hover color */
+}
+
+/* END OF PRABANJIR CSS*/
+
+/* START OF SAATBANJIR CSS*/
+/* Container Style for Saat Banjir */
+#saat-banjir {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Section Styling for Poster */
+#saat-banjir-1, #saat-banjir-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 133%;
+    margin-top: -20px;
+}
+
+#saat-banjir-1 {
+    background-color: #b2dafe;
+}
+
+#saat-banjir-2 {
+    background-color: #ffffff;
+}
+
+/* Poster Styling */
+.poster {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.poster img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* Button Styling */
+.back-button-potensi {
+    margin-top: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #66a9ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #383d63; /* Hover color */
+}
+
+/* END OF SAATBANJIR CSS*/
+
+/*start of pascabanjir*/
+/* Container Style for Pasca Banjir */
+#pasca-banjir {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Section Styling for Poster Pasca Banjir */
+#pasca-banjir-1, #pasca-banjir-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 133%;
+    margin-top: -20px;
+}
+
+#pasca-banjir-1 {
+    background-color: #0083a4;
+}
+
+#pasca-banjir-2 {
+    background-color: #a7e1d5;
+}
+
+/* Poster Styling for Pasca Banjir */
+#pasca-banjir-1 .poster, #pasca-banjir-2 .poster {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+#pasca-banjir-1 .poster img, #pasca-banjir-2 .poster img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* Button Styling for Pasca Banjir */
+#pasca-banjir-2 .back-button-potensi {
+    margin-top: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#pasca-banjir-2 .btn-primary {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #66a9ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#pasca-banjir-2 .btn-primary:hover {
+    background-color: #383d63; /* Hover color */
+}
+
+/*end of pascabanjir*/
+
+
+
