@@ -11,7 +11,7 @@
 
         <h2 style="font-size: 1.6rem; color: #333;">Formulir Rapid Health Assessment</h2>
 
-        <form action="#" method="POST"
+        <form action="#" method=""
             style="font-size: 1.1rem; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
             @csrf
 
@@ -250,11 +250,8 @@
                     </button>
                 </div>
 
-                <!-- Submit Button -->
-                <button type="submit"
-                    style="padding: 10px 20px; font-size: 1.2rem; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                    Kirim Formulir
-                </button>
+                <button type="submit" id="submitBtn" class="btn btn-primary" style="margin-top: 20px;">Kirim Formulir</button>
+
             </div>
         </form>
 

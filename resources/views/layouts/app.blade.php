@@ -118,5 +118,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah pengiriman form untuk sementara
+
+        Swal.fire({
+            title: 'Apakah Anda yakin?',
+            text: "Pastikan semua data yang dimasukkan sudah benar.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Ya, Kirim!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Jika pengguna memilih "Ya, Kirim!", form akan disubmit
+                        Swal.fire({
+                    icon: 'success',
+                    title: 'Form Berhasil disimpan',
+                    text: 'Terimakasih telah berpartisipasi dalam pengembangan layanan siap siaga bencana',
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+                document.querySelector('form').submit(); 
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
