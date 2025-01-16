@@ -10,7 +10,30 @@
             nyawa serta mengurangi dampak jangka panjang.</p>
 
         <h2 style="font-size: 1.6rem; color: #333;">Formulir Rapid Health Assessment</h2>
+            <!-- Informasi Dasar Pengisi Form -->
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; color: #555;">Nama Pengisi Formulir</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
 
+            <div style="margin-bottom: 15px;">
+                <label for="role" style="display: block; color: #555;">Peran Pengisi Formulir</label>
+                <select id="role" name="role" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                    <option value="medical">Tenaga Medis</option>
+                    <option value="volunteer">Relawan</option>
+                    <option value="official">Pejabat Resmi</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="location" style="display: block; color: #555;">Lokasi Pengungsi</label>
+                <input type="text" id="location" name="location" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="contact" style="display: block; color: #555;">Nomor Kontak Pengisi Formulir</label>
+                <input type="tel" id="contact" name="contact" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
         <form action="#" method=""
             style="font-size: 1.1rem; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
             @csrf
@@ -68,10 +91,10 @@
             <h3 style="font-size: 1.3rem; color: #333; margin-top: 30px; margin-bottom: 20px;">6. Akses ke Fasilitas
                 Kesehatan</h3>
             <div style="margin-bottom: 15px;">
-                <label for="question6" style="display: block; color: #555;">Apakah pengungsi memiliki akses ke fasilitas
+                <label for="question77" style="display: block; color: #555;">Apakah pengungsi memiliki akses ke fasilitas
                     kesehatan dasar?</label>
-                <label><input type="radio" name="question6" value="yes" style="margin-right: 10px;">Ya</label>
-                <label><input type="radio" name="question6" value="no" style="margin-right: 10px;">Tidak</label>
+                <label><input type="radio" name="question77" value="yes" style="margin-right: 10px;">Ya</label>
+                <label><input type="radio" name="question77" value="no" style="margin-right: 10px;">Tidak</label>
             </div>
 
             <h3 style="font-size: 1.3rem; color: #333; margin-top: 30px; margin-bottom: 20px;">7. Penyakit Menular</h3>
@@ -240,14 +263,7 @@
             <div style="margin-top: 30px; display: flex; justify-content: space-between; align-items: center;">
                 <!-- Pagination Button -->
                 <div>
-                    <button type="button"
-                        style="padding: 10px 20px; font-size: 1.2rem; background-color: #f0f0f0; color: #007bff; border: 1px solid #007bff; border-radius: 5px; cursor: pointer;">
-                        Sebelumnya
-                    </button>
-                    <button type="button"
-                        style="padding: 10px 20px; font-size: 1.2rem; background-color: #f0f0f0; color: #007bff; border: 1px solid #007bff; border-radius: 5px; cursor: pointer; margin-left: 10px;">
-                        Selanjutnya
-                    </button>
+                    
                 </div>
 
                 <button type="submit" id="submitBtn" class="btn btn-primary" style="margin-top: 20px;">Kirim Formulir</button>
